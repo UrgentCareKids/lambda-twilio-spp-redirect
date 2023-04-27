@@ -11,7 +11,8 @@ def handler(event, context):
     body = json.loads(event['body'])
     to_phone_number = body.get('phone_number')
     district = body.get('district')
-    send_sms(to_phone_number, district)
+    print(body)
+    # send_sms(to_phone_number, district)
 
 
 def send_sms(to_phone_number, district):
