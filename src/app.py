@@ -7,7 +7,7 @@ auth_token = os.environ['TWILIO_AUTH_TOKEN']
 twilio_phone_number = os.environ['TWILIO_PHONE_NUMBER']
 
 
-def lambda_handler(event, context):
+def handler(event, context):
     body = json.loads(event['body'])
     to_phone_number = body.get('phone_number')
     district = body.get('district')
