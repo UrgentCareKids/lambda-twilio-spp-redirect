@@ -8,10 +8,11 @@ twilio_phone_number = os.environ['TWILIO_PHONE_NUMBER']
 
 
 def handler(event, context):
-    body = json.loads(event['body'])
+    # body = json.loads(event['body'])
     to_phone_number = body.get('phone_number')
     district = body.get('district')
-    print(body)
+    print(event)
+    print(context)
     # send_sms(to_phone_number, district)
 
 
